@@ -38,22 +38,22 @@ students = [
 ]
 
 courses = {
-    'python':[],
-    'java':[],
-    'javascript':[]
+    'python': [],
+    'java': [],
+    'javascript': []
 }
 
 
 for i in students:
     course_x = i.get('course')
     name_x = i.get('name')
-    
+
     if course_x == 'python':
         courses['python'].append(name_x)
 
     elif course_x == 'java':
         courses['java'].append(name_x)
-    
+
     elif course_x == 'javascript':
         courses['javascript'].append(name_x)
 
@@ -65,28 +65,29 @@ names_ages = {}
 for i in students:
     name_a = i.get('name')
     age_x = i.get('age')
+    names_ages[name_a] = age_x
 
-    names_ages[name_a]=  age_x
-    
 
 # print(names_ages)
 
 
-names = ['Janyl', 'Nursultan', 'Meerim', 'Emir', 'Susann', 'Marcus', 'Aidin', 
-'Aigerim', 'Angela', 'Albert', 'Jyldyz', 'Doe', 'Gloria', 'Aliaskar',
- 'Martin', 'John', 'Andrew', 'Steve', 'Johnathan', 'Adyl', 'Chyngyz', 
-'Michael', 'Atay', 'Mikkel', 'Agnes', 'Aidana', 'Sultan', 'Nash',
- 'Nicolas', 'Mirbek', 'Aktan', 'Emirlan', 'Jennifer', 'Eniston', 'Alex', 'Mark']
+names = [
+    'Janyl', 'Nursultan', 'Meerim', 'Emir', 'Susann', 'Marcus', 'Aidin',
+    'Aigerim', 'Angela', 'Albert', 'Jyldyz', 'Doe', 'Gloria', 'Aliaskar',
+    'Martin', 'John', 'Andrew', 'Steve', 'Johnathan', 'Adyl', 'Chyngyz',
+    'Michael', 'Atay', 'Mikkel', 'Agnes', 'Aidana', 'Sultan', 'Nash',
+    'Nicolas', 'Mirbek', 'Aktan', 'Emirlan', 'Jennifer', 'Eniston', 'Alex',
+    'Mark'
+    ]
 
 
-def func(lst, kwargs):
+def func(lst, dct):
     for i in lst:
         try:
-            print(f'{i} --{kwargs[i]}')
+            print(f'{i} --{dct[i]}')
 
         except KeyError:
             print(f"Такого {i} имени в словаре не существует")
 
 
 func(names, names_ages)
-        
