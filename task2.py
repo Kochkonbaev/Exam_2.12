@@ -34,14 +34,15 @@ advert = []
 # for i in str.lower(some_text):
 # это если все буквы посчитать и большие, и маленькие
 
-for i in some_text:
+for i in some_text.lower():
     if i == 's':
         word_s += 1
     elif i == 't':
         word_t += 1
     else:
         continue
-
+some_text = some_text.replace('advert', 'ADVERT')
+print(some_text)
 
 # for i in some_text:
 #     advert.append(i)
